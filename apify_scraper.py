@@ -20,10 +20,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configure logging
+log_dir = Path("logs")
+log_dir.mkdir(exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("apify_scraper.log"), logging.StreamHandler()],
+    handlers=[
+        logging.FileHandler(log_dir / "apify_scraper.log"),
+        logging.StreamHandler(),
+    ],
 )
 logger = logging.getLogger(__name__)
 

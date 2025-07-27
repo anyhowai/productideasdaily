@@ -5,11 +5,11 @@ This module analyzes tweets to identify tools and products that people want,
 categorizing them by type and extracting key insights for startup ideation.
 """
 
-from datetime import datetime
 import json
 import logging
 import os
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -17,10 +17,16 @@ import google.generativeai as genai  # type: ignore
 from dotenv import load_dotenv
 
 # Configure logging
+log_dir = Path("logs")
+log_dir.mkdir(exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("categorizer.log"), logging.StreamHandler()],
+    handlers=[
+        logging.FileHandler(log_dir / "categorizer.log"),
+        logging.StreamHandler(),
+    ],
 )
 logger = logging.getLogger(__name__)
 
