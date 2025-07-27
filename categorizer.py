@@ -320,10 +320,17 @@ Return your analysis as a JSON object with exactly this structure:
                 # Handle tweet ID mapping with error handling
                 matched_tweets = []
                 for tweet_id in tweet_ids:
-                    if tweet_id in tweets_dict:
-                        matched_tweets.append(tweets_dict[tweet_id])
+                    # Add "tweet-" prefix if it's missing
+                    full_tweet_id = (
+                        tweet_id
+                        if tweet_id.startswith("tweet-")
+                        else f"tweet-{tweet_id}"
+                    )
+
+                    if full_tweet_id in tweets_dict:
+                        matched_tweets.append(tweets_dict[full_tweet_id])
                     else:
-                        logger.warning(f"Could not find tweet with ID: {tweet_id}")
+                        logger.warning(f"Could not find tweet with ID: {full_tweet_id}")
 
                 if not matched_tweets:
                     logger.warning(
