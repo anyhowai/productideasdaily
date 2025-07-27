@@ -632,6 +632,25 @@ def create_product_card(
 # App layout
 app.layout = html.Div(
     [
+        # Floating feedback button in top right corner
+        html.Div(
+            dbc.Button(
+                "Feedback",
+                id="feedback-btn",
+                color="info",
+                size="sm",
+                href="https://forms.gle/FX1a9RpiswyjzUfcA",
+                target="_blank",
+            ),
+            style={
+                "position": "fixed",
+                "top": "20px",
+                "right": "20px",
+                "zIndex": "1000",
+                "boxShadow": "0 2px 10px rgba(0,0,0,0.1)",
+                "borderRadius": "5px",
+            },
+        ),
         # Header with theme switch and date selector
         html.Div(
             [
