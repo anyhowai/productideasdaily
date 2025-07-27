@@ -38,28 +38,22 @@ Daily Scraper → Storage -> LLM Categorizer → Dashboard
 2. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
-   # and/or
-   npm install
    ```
 3. **Create `.env` file** with:
    ```
-   APIFY_TOKEN=your_token_here
-   GEMINI_API_KEY=your_key_here
+   GEMINI_API_KEY=your_gemini_api_key_here
    ```
-4. **Configure scraper query list and date settings**
-5. **Run the application**:
+4. **Configure scraper queries and run on apify website to generate .json data.**
+5. **Run the tweet analysis**:
    ```bash
-   python scraper.py        # Fetch daily tweets
-   python categorizer.py     # Process with LLM
-   npm run dev              # Launch dashboard
+   python categorizer.py
    ```
 
 ## Project Structure
 
 ```
 /
-├── scraper.py          # Scraper job logic
-├── categorizer.py       # LLM prompt and output processing
+├── categorizer.py      # LLM prompt and output processing
 ├── dashboard/          # Frontend application code
 ├── data/               # Raw and categorized tweet data
 └── README.md           # This document
