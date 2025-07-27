@@ -429,10 +429,14 @@ def toggle_tweets_list(
         Updated style dictionary
     """
     if n_clicks is None:
-        return {**(current_style or {}), "display": "none"}
+        style = (current_style or {}).copy()
+        style["display"] = "none"
+        return style
 
     if current_style and current_style.get("display") == "none":
-        return {**current_style, "display": "block"}
+        style = current_style.copy()
+        style["display"] = "block"
+        return style
     return {**(current_style or {}), "display": "none"}
 
 
