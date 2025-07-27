@@ -266,6 +266,7 @@ app = dash.Dash(
     __name__,
     external_stylesheets=[dbc.themes.BOOTSTRAP],
     suppress_callback_exceptions=True,
+    title="10 Product Ideas of the Day",
 )
 
 # Add custom CSS for dark mode dropdown styling
