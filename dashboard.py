@@ -1111,4 +1111,11 @@ def handle_retry_load(
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+
+    # Get port from environment variable (for Render deployment) or use default
+    port = int(os.environ.get("PORT", 10000))
+
+    # Bind to 0.0.0.0 for external access (required for Render)
+    # Use debug=False for production deployment
+    app.run(host="0.0.0.0", port=port, debug=False)
