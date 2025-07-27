@@ -475,37 +475,6 @@ def create_token_usage_card(colors: Dict[str, str]) -> html.Div:
     )
 
 
-def create_header(dark_mode: bool) -> html.Div:
-    """
-    Create the application header.
-
-    Args:
-        dark_mode: Whether dark mode is enabled
-
-    Returns:
-        Dash HTML Div component
-    """
-    colors = get_theme_colors(dark_mode)
-    return html.Div(
-        [
-            html.H3("Startup Ideas Bot", style={"flex": "1", "color": colors["text"]}),
-            dbc.Switch(
-                id="theme-switch",
-                label="Dark Mode",
-                value=dark_mode,
-                style={"marginLeft": "auto"},
-            ),
-        ],
-        style={
-            "display": "flex",
-            "alignItems": "center",
-            "padding": "10px",
-            "borderBottom": f"1px solid {colors['border']}",
-            "backgroundColor": colors["card_background"],
-        },
-    )
-
-
 def create_summary_section(colors: Dict[str, str]) -> html.Div:
     """
     Create the summary statistics section.
@@ -542,7 +511,7 @@ def create_summary_section(colors: Dict[str, str]) -> html.Div:
 # App layout
 app.layout = html.Div(
     [
-        create_header(False),
+        html.Div(id="header"),
         html.Div(id="error-container"),
         html.Div(id="summary-container"),
         html.Div(
@@ -567,22 +536,46 @@ app.layout = html.Div(
 
 # Callbacks
 @app.callback(
-    [Output("error-container", "children"), Output("summary-container", "children")],
+    [
+        Output("header", "children"),
+        Output("error-container", "children"),
+        Output("summary-container", "children"),
+    ],
     [Input("theme-switch", "value")],
 )
-def render_error_and_summary(
+def render_header_error_and_summary(
     dark_mode: bool,
-) -> Tuple[List[Union[dbc.Alert, html.Div]], html.Div]:
+) -> Tuple[html.Div, List[Union[dbc.Alert, html.Div]], html.Div]:
     """
-    Render error alerts and summary section based on data loading status.
+    Render header, error alerts and summary section based on data loading status.
 
     Args:
         dark_mode: Whether dark mode is enabled
 
     Returns:
-        Tuple of (error_components, summary_component)
+        Tuple of (header_component, error_components, summary_component)
     """
     colors = get_theme_colors(dark_mode)
+
+    # Create header component
+    header_component = html.Div(
+        [
+            html.H3("Startup Ideas Bot", style={"flex": "1", "color": colors["text"]}),
+            dbc.Switch(
+                id="theme-switch",
+                label="Dark Mode",
+                value=dark_mode,
+                style={"marginLeft": "auto"},
+            ),
+        ],
+        style={
+            "display": "flex",
+            "alignItems": "center",
+            "padding": "10px",
+            "borderBottom": f"1px solid {colors['border']}",
+            "backgroundColor": colors["card_background"],
+        },
+    )
 
     # Handle error state
     if data_load_error:
@@ -603,7 +596,7 @@ def render_error_and_summary(
         error_components = []
         summary_component = create_summary_section(colors)
 
-    return error_components, summary_component
+    return header_component, error_components, summary_component
 
 
 @app.callback(Output("cards-container", "children"), Input("theme-switch", "value"))
@@ -799,6 +792,7 @@ def update_token_pie(dark_mode: bool) -> go.Figure:
 
 @app.callback(
     [
+        Output("header", "children", allow_duplicate=True),
         Output("error-container", "children", allow_duplicate=True),
         Output("summary-container", "children", allow_duplicate=True),
         Output("cards-container", "children", allow_duplicate=True),
@@ -808,7 +802,12 @@ def update_token_pie(dark_mode: bool) -> go.Figure:
 )
 def handle_retry_load(
     n_clicks: Optional[int],
-) -> Tuple[List[Union[dbc.Alert, html.Div]], html.Div, List[Union[dbc.Card, html.Div]]]:
+) -> Tuple[
+    html.Div,
+    List[Union[dbc.Alert, html.Div]],
+    html.Div,
+    List[Union[dbc.Card, html.Div]],
+]:
     """
     Handle retry button click to reload data.
 
@@ -816,7 +815,7 @@ def handle_retry_load(
         n_clicks: Number of button clicks
 
     Returns:
-        Tuple of (error_components, summary_component, card_components)
+        Tuple of (header_component, error_components, summary_component, card_components)
     """
     if n_clicks is None:
         raise dash.exceptions.PreventUpdate
@@ -825,6 +824,26 @@ def handle_retry_load(
 
     # Re-render all components with updated data
     colors = get_theme_colors(False)  # Default to light mode for retry
+
+    # Create header component
+    header_component = html.Div(
+        [
+            html.H3("Startup Ideas Bot", style={"flex": "1", "color": colors["text"]}),
+            dbc.Switch(
+                id="theme-switch",
+                label="Dark Mode",
+                value=False,  # Default to light mode for retry
+                style={"marginLeft": "auto"},
+            ),
+        ],
+        style={
+            "display": "flex",
+            "alignItems": "center",
+            "padding": "10px",
+            "borderBottom": f"1px solid {colors['border']}",
+            "backgroundColor": colors["card_background"],
+        },
+    )
 
     if data_load_error:
         error_components = [create_error_alert(data_load_error, colors)]
@@ -879,7 +898,7 @@ def handle_retry_load(
                 for idx, product in enumerate(product_data)
             ]
 
-    return error_components, summary_component, card_components
+    return header_component, error_components, summary_component, card_components
 
 
 if __name__ == "__main__":
