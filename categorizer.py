@@ -9,7 +9,7 @@ import json
 import logging
 import os
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 # Get date in format DDMMYY
-date = datetime.now().strftime("%d%m%y")
+date = datetime.now(timezone.utc).strftime("%d%m%y")
 
 DATA_FILE = f"data/scraped/{date}_data.json"
 MODEL = "gemini-2.5-flash"
@@ -334,7 +334,8 @@ Return your analysis as a JSON object with exactly this structure:
 
                 if not matched_tweets:
                     logger.warning(
-                        f"Could not find matching tweets for product request with tweet IDs: {tweet_ids}"
+                        f"Could not find matching tweets for product request with "
+                        f"tweet IDs: {tweet_ids}"
                     )
                     matched_tweets = []
 

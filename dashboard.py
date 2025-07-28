@@ -7,13 +7,12 @@ and related tweet data from analysis results.
 
 import json
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, Union
 
 import dash
 import dash_bootstrap_components as dbc
-import plotly.graph_objects as go
 from dash import MATCH, Input, Output, State, dcc, html
 
 # Configure logging
@@ -40,7 +39,7 @@ def get_analysis_data_file(date_str: Optional[str] = None) -> Path:
         Path to the analysis data file for the specified date
     """
     if date_str is None:
-        today = datetime.now()
+        today = datetime.now(timezone.utc)
         date_str = today.strftime("%d%m%y")  # Format: DDMMYY
     return Path(f"data/analysis/{date_str}_analysis.json")
 
@@ -105,7 +104,7 @@ LIGHT_MODE_COLORS = {
 data_load_error: Optional[str] = None
 product_data: List[Dict[str, Any]] = []
 summary_data: Dict[str, Any] = {}
-current_date: str = datetime.now().strftime("%d%m%y")
+current_date: str = datetime.now(timezone.utc).strftime("%d%m%y")
 
 
 # Data loading
@@ -195,7 +194,10 @@ def load_data_with_error_handling(
         return product_data, summary_data, None
 
     except FileNotFoundError:
-        error_msg = f"Data file not found for date {current_date}. Please ensure the analysis data file exists in the correct location."
+        error_msg = (
+            f"Data file not found for date {current_date}. "
+            "Please ensure the analysis data file exists in the correct location."
+        )
         logger.error(f"Data loading failed: {error_msg}")
         data_load_error = error_msg
         return [], {}, error_msg
@@ -209,13 +211,19 @@ def load_data_with_error_handling(
         return [], {}, error_msg
 
     except KeyError as e:
-        error_msg = f"Data file is missing required information: {e}. Please regenerate the analysis data."
+        error_msg = (
+            f"Data file is missing required information: {e}. "
+            "Please regenerate the analysis data."
+        )
         logger.error(f"Data loading failed: {error_msg}")
         data_load_error = error_msg
         return [], {}, error_msg
 
     except PermissionError:
-        error_msg = "Cannot read the data file due to permission restrictions. Please check file permissions."
+        error_msg = (
+            "Cannot read the data file due to permission restrictions. "
+            "Please check file permissions."
+        )
         logger.error(f"Data loading failed: {error_msg}")
         data_load_error = error_msg
         return [], {}, error_msg
@@ -279,7 +287,8 @@ app.index_string = """
         {%favicon%}
         {%css%}
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1529LBL7KX"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1529LBL7KX">
+        </script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -526,7 +535,10 @@ def create_tweet_card(tweet: Dict[str, Any], colors: Dict[str, str]) -> dbc.Card
             [
                 html.Blockquote(tweet["text"], style={"color": colors["text"]}),
                 html.Small(
-                    f"@{tweet['user_handle']} on {tweet['created_at']} — {tweet['engagement_score']}",
+                    (
+                        f"@{tweet['user_handle']} on {tweet['created_at']} — "
+                        f"{tweet['engagement_score']}"
+                    ),
                     style={"color": colors["text"]},
                 ),
                 html.Br(),
@@ -771,7 +783,8 @@ def render_error_and_header(
         dark_mode: Whether dark mode is enabled
 
     Returns:
-        Tuple of (header_style, error_components, date_options, date_value, dropdown_class, dropdown_style)
+        Tuple of (header_style, error_components, date_options, date_value,
+                 dropdown_class, dropdown_style)
     """
     global product_data, summary_data, data_load_error, current_date
 

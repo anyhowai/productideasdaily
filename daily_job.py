@@ -5,14 +5,12 @@ Daily Job Script
 Runs scraping and categorization, then pushes data to GitHub.
 """
 
-import json
 import logging
 import os
 import subprocess
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict
 
 from dotenv import load_dotenv
 
@@ -51,7 +49,7 @@ def run_categorization() -> bool:
         from categorizer import TweetCategorizer
 
         # Get today's data file
-        today = datetime.now().strftime("%d%m%y")
+        today = datetime.now(timezone.utc).strftime("%d%m%y")
         data_file = f"data/scraped/{today}_data.json"
 
         if not Path(data_file).exists():
@@ -151,7 +149,7 @@ def push_to_github() -> bool:
             return True
 
         # Commit
-        date_str = datetime.now().strftime("%Y-%m-%d")
+        date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         commit_msg = f"Daily data update - {date_str}"
         subprocess.run(
             ["git", "commit", "-m", commit_msg], check=True, capture_output=True

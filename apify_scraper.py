@@ -9,7 +9,7 @@ import json
 import logging
 import os
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -87,7 +87,8 @@ class ApifyScraper:
         self.api_token = api_token or os.getenv("APIFY_TOKEN")
         if not self.api_token:
             raise ValueError(
-                "Apify API token is required. Set APIFY_TOKEN environment variable or pass api_token parameter."
+                "Apify API token is required. Set APIFY_TOKEN environment variable "
+                "or pass api_token parameter."
             )
 
         self.client = ApifyClient(self.api_token)
@@ -134,19 +135,24 @@ class ApifyScraper:
 
         logger.info(f"Starting Twitter scraper with actor ID: {self.actor_id}")
         logger.info(
-            f"Search parameters: since={config.since}, until={config.until}, maxItems={config.max_items}"
+            f"Search parameters: since={config.since}, until={config.until}, "
+            f"maxItems={config.max_items}"
         )
         logger.info(
-            f"Search filters: words_and={config.words_and}, words_or={config.words_or}, hashtag={config.hashtag}"
+            f"Search filters: words_and={config.words_and}, "
+            f"words_or={config.words_or}, hashtag={config.hashtag}"
         )
         logger.info(
-            f"Content filters: min_likes={config.min_likes}, min_replies={config.min_replies}, min_retweets={config.min_retweets}"
+            f"Content filters: min_likes={config.min_likes}, "
+            f"min_replies={config.min_replies}, min_retweets={config.min_retweets}"
         )
         logger.info(
-            f"User filters: verified={config.verified}, blue_verified={config.blue_verified}"
+            f"User filters: verified={config.verified}, "
+            f"blue_verified={config.blue_verified}"
         )
         logger.info(
-            f"Content types: retweets={config.retweets}, replies={config.replies}, images={config.images}, videos={config.videos}"
+            f"Content types: retweets={config.retweets}, replies={config.replies}, "
+            f"images={config.images}, videos={config.videos}"
         )
 
         # Run the Actor and wait for it to finish
@@ -184,7 +190,8 @@ class ApifyScraper:
 
         logger.info(f"Retrieved {len(results)} total items from dataset")
         logger.info(
-            f"Content breakdown: {tweet_count} tweets, {retweet_count} retweets, {reply_count} replies, {quote_count} quotes"
+            f"Content breakdown: {tweet_count} tweets, {retweet_count} retweets, "
+            f"{reply_count} replies, {quote_count} quotes"
         )
 
         # Log engagement statistics if available
@@ -203,15 +210,19 @@ class ApifyScraper:
 
             if likes:
                 logger.info(
-                    f"Engagement stats - Likes: avg={sum(likes)/len(likes):.1f}, max={max(likes)}, min={min(likes)}"
+                    f"Engagement stats - Likes: avg={sum(likes)/len(likes):.1f}, "
+                    f"max={max(likes)}, min={min(likes)}"
                 )
             if retweets:
+                avg_retweets = sum(retweets) / len(retweets)
                 logger.info(
-                    f"Engagement stats - Retweets: avg={sum(retweets)/len(retweets):.1f}, max={max(retweets)}, min={min(retweets)}"
+                    f"Engagement stats - Retweets: avg={avg_retweets:.1f}, "
+                    f"max={max(retweets)}, min={min(retweets)}"
                 )
             if replies:
                 logger.info(
-                    f"Engagement stats - Replies: avg={sum(replies)/len(replies):.1f}, max={max(replies)}, min={min(replies)}"
+                    f"Engagement stats - Replies: avg={sum(replies)/len(replies):.1f}, "
+                    f"max={max(replies)}, min={min(replies)}"
                 )
 
         return results
@@ -234,7 +245,7 @@ class ApifyScraper:
         output_path.mkdir(parents=True, exist_ok=True)
 
         # Generate filename with current date
-        date_str = datetime.now().strftime("%d%m%y")
+        date_str = datetime.now(timezone.utc).strftime("%d%m%y")
         filename = f"{date_str}_data.json"
         file_path = output_path / filename
 
@@ -310,7 +321,7 @@ def update_dates_dynamically(config: Dict[str, Any]) -> Dict[str, Any]:
         Updated configuration with dynamic dates
     """
     # Get today's date and 2 days ago
-    today = datetime.now()
+    today = datetime.now(timezone.utc)
     two_days_ago = today - timedelta(days=2)
 
     # Create a copy of the config and update dates
@@ -319,7 +330,8 @@ def update_dates_dynamically(config: Dict[str, Any]) -> Dict[str, Any]:
     updated_config["until"] = today.strftime("%Y-%m-%d")
 
     logger.info(
-        f"Updated dates: since={updated_config['since']}, until={updated_config['until']}"
+        f"Updated dates: since={updated_config['since']}, "
+        f"until={updated_config['until']}"
     )
     return updated_config
 
@@ -338,7 +350,7 @@ def run_scraping_job(
     Returns:
         Path to saved results file, or None if failed
     """
-    start_time = datetime.now()
+    start_time = datetime.now(timezone.utc)
     logger.info("=" * 60)
     logger.info("STARTING APIFY TWITTER SCRAPING JOB")
     logger.info("=" * 60)
@@ -367,7 +379,7 @@ def run_scraping_job(
         logger.info("Saving results to file...")
         output_file = scraper.save_results(results)
 
-        end_time = datetime.now()
+        end_time = datetime.now(timezone.utc)
         duration = end_time - start_time
 
         logger.info("=" * 60)
@@ -380,7 +392,7 @@ def run_scraping_job(
         return output_file
 
     except Exception as e:
-        end_time = datetime.now()
+        end_time = datetime.now(timezone.utc)
         duration = end_time - start_time
 
         logger.error("=" * 60)
@@ -400,7 +412,7 @@ def main():
         result_file = run_scraping_job()
 
         if result_file:
-            print(f"Scraping completed successfully!")
+            print("Scraping completed successfully!")
             print(f"Results saved to: {result_file}")
         else:
             print("Scraping failed. Check the logs for details.")
