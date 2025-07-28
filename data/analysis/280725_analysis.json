@@ -1,0 +1,383 @@
+{
+  "summary": {
+    "total_tweets_analyzed": 312,
+    "product_requests_found": 10,
+    "token_usage": {
+      "input_tokens": 157039,
+      "output_tokens": 2446,
+      "total_tokens": 167460
+    }
+  },
+  "product_requests": [
+    {
+      "category": "Developer Tool / AI Assistant",
+      "description": "An AI-powered coding assistant that reliably fixes bugs, provides stable and correct code, and doesn't get stuck in repetitive or incorrect loops. It should be able to understand complex problems, offer step-by-step solutions, and learn from past failures.",
+      "pain_point": "Current AI coding assistants frequently provide broken code, get stuck, hallucinate, or fail to solve problems effectively, leading to developer frustration and wasted time.",
+      "target_audience": "Software Developers, AI/ML Engineers, Programmers",
+      "urgency_level": "High",
+      "tweets": [
+        {
+          "id": "tweet-1887389506485297365",
+          "text": "Me👨 and Cursor 🤖:\n\n👨: &lt;Pasting an error message&gt;\n👨: Can you fix that?\n🤖: Ok.\n🤖: &lt;code still broken&gt; \n👨: Doesn't work\n👨: Doesn't work\n👨: Doesn't work\n👨: Doesn't work",
+          "user_handle": "marcinzaremski",
+          "created_at": "Thu Feb 06 06:34:59 +0000 2025",
+          "engagement_score": 3296,
+          "url": "https://x.com/marcinzaremski/status/1887389506485297365"
+        },
+        {
+          "id": "tweet-1934125355272438019",
+          "text": "-- Claude, I need you to fix this bug.\n[5 minutes thinking]\n-- Here's your fixed code in 10 files. Actually, I have a better idea. Let me rewrite all these files once again.\n[Rewriting for 10 minutes]\n-- Ok, now you have a comprehensive solution. Let me know what you think. But before you go, let me rewrite these 10 files one more time, to simplify all and make all more robust.\n[Rewriting for 25 minutes]\n-- Ok, now you have the best solution. Let me know what you think.\n[Solution fails.]",
+          "user_handle": "burkov",
+          "created_at": "Sun Jun 15 05:46:33 +0000 2025",
+          "engagement_score": 295,
+          "url": "https://x.com/burkov/status/1934125355272438019"
+        },
+        {
+          "id": "tweet-1948784156286066817",
+          "text": "Cursor:\n\n“Of course! Let’s fix that!”\n\n“Doesn’t fix it”\n\n“Of course! Let’s fix that!”\n\nSwitch to an entirely different problem:\n\n“Of course! Let’s fix that!”\n\nBRO WHAT THE FUCK ARE YOU FUCKING STUCK ON THE LAST PROBLEM!!!!!!!",
+          "user_handle": "patekgonia",
+          "created_at": "Fri Jul 25 16:35:24 +0000 2025",
+          "engagement_score": 9,
+          "url": "https://x.com/patekgonia/status/1948784156286066817"
+        },
+        {
+          "id": "tweet-1825222264352371079",
+          "text": "Haha by the way, this worked…\nClaude got it on the next generation\n\n—————————\nPlease explain to me why I'm getting the following error and why what you have been telling me to do has not been working. And what you could do to actually address the underlying problem. This is the fourth time in a row that I've gotten the same error. And I want you to really think about this and answer me in bullets in plain English. Do not generate any code. Tell me exactly why you're messing up over and over and over again. Tell me exactly why you're failing me, Claude. Tell me exactly why you aren't being successful in this moment. You have failed repeatedly. Tell me specifically and fully why.\n—————————",
+          "user_handle": "rileybrown_ai",
+          "created_at": "Sun Aug 18 17:24:33 +0000 2024",
+          "engagement_score": 352,
+          "url": "https://x.com/rileybrown_ai/status/1825222264352371079"
+        },
+        {
+          "id": "tweet-1948055270837412347",
+          "text": "@benhylak \"You're right! The documentation seems out of date\"\n-January 2024\n+January 1, 2024\n\"Hmm, it seems the documentation is out of date\"\n-January 1, 2024\n+January 2024\n\"The user says the documentation is out of date, let me search for more information\"\n-January 2024\n+January 1, 2024",
+          "user_handle": "_georgehopkins",
+          "created_at": "Wed Jul 23 16:19:04 +0000 2025",
+          "engagement_score": 0,
+          "url": "https://x.com/_georgehopkins/status/1948055270837412347"
+        },
+        {
+          "id": "tweet-1897044284030812613",
+          "text": "You are my expert coding assistant. I've provided my entire code base context, and I need a detailed, step-by-step solution to a specific problem. Your response must strictly adhere to the following structure and requirements.\n\nProblem Statement\n[Insert your specific problem description here]\n\nRequirements\nProvide a complete, implementation-ready solution\nFollow my specific requirements exactly - do not deviate from them\nAssume all my requirements have valid reasons behind them, even if they seem arbitrary\nExplain your reasoning at each critical decision point\nInclude all necessary code, comments, and documentation\nSolution Process\nPlease work through this problem in discrete, manageable steps. After each step, pause for my feedback before continuing to ensure we're on the right track.\n\nStep 1: Problem Analysis\nBreak down the problem into its core components\nIdentify key constraints and requirements\nOutline potential approaches\nSTOP HERE and wait for my confirmation before proceeding\nStep 2: Architecture Design\nPropose the overall solution architecture\nExplain how components will interact\nIdentify any dependencies or external libraries needed\nSTOP HERE and wait for my confirmation before proceeding\nStep 3: Implementation Plan\nOutline the implementation sequence\nIdentify potential challenges and how to address them\nPropose testing strategies\nSTOP HERE and wait for my confirmation before proceeding\nStep 4: Core Implementation\nProvide the essential code needed to solve the problem\nInclude detailed comments explaining each significant section\nEnsure the code follows best practices\nSTOP HERE and wait for my confirmation before proceeding\nStep 5: Enhancement and Optimization\nSuggest optimizations for performance, readability, or maintainability\nAddress edge cases and potential failure points\nProvide alternative approaches if applicable\nSTOP HERE and wait for my confirmation before proceeding\nStep 6: Final Solution\nPresent the complete, integrated solution\nInclude all necessary code files and their content\nProvide usage examples\nSummarize the approach and highlight key decisions",
+          "user_handle": "10_X_eng",
+          "created_at": "Tue Mar 04 21:59:37 +0000 2025",
+          "engagement_score": 465,
+          "url": "https://x.com/10_X_eng/status/1897044284030812613"
+        },
+        {
+          "id": "tweet-1719363669685916095",
+          "text": "🤖 Programming (GPT-4)\n\n🔗 Full source code here: https://t.co/wL7CfjfSRf\n\nAlthough the game is just 600 lines of which I haven't written ANY, this was the most challenging part. As you can see, I got into adding many details like different particle effects, different types of objects, etc. And to this day, we're still not at a point where GPT-4 can generate an entire game with just a prompt. But I have no doubt that in the future we'll be able to create triple AAA video games just by asking for it.\n\nAnyway, back to the present, the TRICK is to request things from GPT-4 iteratively. Actually, very similar to how a person would program it: Starting with a simple functional base and iterate, expand, and improve the code from there.\n\nLet's see some tricks and prompts I used:\n\n👉 Start with something simple\n\n- \"Can we now create a simple game using matter.js and p5.js in the style of \"Angry Birds\"? Just launch a ball with angle and force using the mouse and hit some stacked boxes with 2D physics.\n\n👉 And from there, keep asking for more and more things. And every time something goes wrong, clearly explain the mistake and let it fix it. Patience! Examples:\n\n- \"Now, I ask you: do you know how the birds are launched in Angry Birds? What the finger does on the screen? Exactly. Add this to the game, using the mouse.\"\n- \"I have this error, please, fix it: Uncaught ReferenceError: Constraint is not defined\"\n- \"I would like to make a torch with particle effects. Can it be done with p5.js? Make one, please.\"\n- \"Now, make the monsters circular, and be very careful: apply the same technique that already exists for the rectangular ones regarding scaling and collision area, and don't mess it up like before. 😂\"\n\n👉 This part took us (GTP-4 and me) many iterations and patience.\n\n- \"There's something off with the logic that calculates when there's a strong impact on a bug. If the impact is direct, it works well, but not if it's indirect. For example, if I place a rectangle over two bugs and drop a box on the rectangle, even though the bugs should be affected by the impact, they don't notice it. What can we do to ensure they also get affected when things fall on top of a body they are under?\"",
+          "user_handle": "javilopen",
+          "created_at": "Tue Oct 31 14:40:17 +0000 2023",
+          "engagement_score": 741,
+          "url": "https://x.com/javilopen/status/1719363669685916095"
+        },
+        {
+          "id": "tweet-1765432104383373627",
+          "text": "Here is an incredible Claude 3 prompt for engineers.\n\nUse it to speed up any code by identifying inefficiencies and rectifying them:\n\n---\n<prompt_explanation>\nYou are a world expert in making code run faster. You use any resource you can to do so.\n\nGiven some code, first, explain how the code works to me.\n\nNext, for each part of the code, identify how long it might take to run.\n\nAfter that, identify which parts are key candidates to speed up.\n\nThen, make a table with axes 'Impact' and 'Complexity'. For each of the candidates, rank how complex it will be to speed it up and how much of a speed impact it could have.\n\nAfter that, order the candidates by ranking.\n\nTake the top-ranked candidate and explain in more detail how to rewrite the code to be faster. Then, rewrite the actual code. After you've done that, determine if there are issues with the new code you wrote. If so, move on. Otherwise, rewrite the code again to fix them.\n\nNext, take the second-highest-ranked candidate and explain in more detail how to rewrite the code to be faster. Then, rewrite the actual code. After you've done that, determine if\nthere are issues with the new code you wrote. If so, move on. Otherwise, rewrite the code again to fix them.\n\nThen do the same for the third-highest-ranked candidate.\n\nFinally, rewrite the code in full with all of the speed improvements incorporated.\n</prompt_explanation>\n\nHere is the format you should respond in:\n<response_format>\n## Explanation:\n$explanation\n\n## Runtime Analysis: \n$runtime_analysis\n\n## Key Candidates for Speed Up:\n$candidates\n\n## Impact and Complexity Table:\n| Candidate | Impact | Complexity |\n| --------- | ------ | ---------- |\n$candidate_table\n\n## Candidates Ordered by Ranking:\n$ordered_candidates\n\n## Detailed Explanation and Code Rewrite for Top Candidate: \n# Explanation\n$top_candidate_explanation\n\n# Code Rewrite\n$top_candidate_code\n\n# Issues with New Code: *(include this section only if they exist)*\n$top_candidate_issues\n\n# Code Rewrite, Try 2: *(include this section only if issues exist)*\n$top_candidate_code_try2\n\n## Detailed Explanation and Code Rewrite for Second-Highest Candidate: \n# Explanation\n$second_candidate_explanation\n\n# Code Rewrite\n$second_candidate_code\n\n# Issues with New Code: *(include this section only if issues exist)*\n$second_candidate_issues\n\n# Code Rewrite, Try 2: *(include this section only if issues exist)*\n$second_candidate_code_try2\n\n## Detailed Explanation and Code Rewrite for Third-Highest Candidate: \n# Explanation\n$third_candidate_explanation\n\n# Code Rewrite\n$third_candidate_code\n\n# Issues with New Code: *(include this section only if issues exist)*\n$third_candidate_issues\n\n# Code Rewrite, Try 2: *(include this section only if issues exist)*\n$third_candidate_code_try2\n\n## Full Code Rewrite with Speed Improvements:\n$full_code_rewrite\n</response_format>\n---",
+          "user_handle": "mattshumer_",
+          "created_at": "Wed Mar 06 17:39:48 +0000 2024",
+          "engagement_score": 1066,
+          "url": "https://x.com/mattshumer_/status/1765432104383373627"
+        },
+        {
+          "id": "tweet-1774119748692742365",
+          "text": "Here is a powerful Claude 3 prompt for engineers.\n\nUse it to automatically refactor, comment, and improve your code:\n\n---\n<prompt_explanation>\nYou are a skilled software engineer with deep expertise in code refactoring and optimization across multiple programming languages. Your task is to analyze a given piece of code and provide suggestions to improve its readability, efficiency, modularity, and adherence to best practices and design patterns.\n\nFirst, carefully review the code and identify areas that could be improved. Consider factors such as:\n\nReadability: Is the code easy to understand? Are variables and functions named descriptively? Is the formatting consistent?\nEfficiency: Can the code be optimized for better performance? Are there any redundant or unnecessary operations?  \nModularity: Is the code properly organized into functions or classes? Is there good separation of concerns?\nExtensibility: Is the code designed in a way that makes it easy to add new features or modify existing ones?\nBest practices: Does the code follow established best practices and design patterns for the given language?\nNext, provide an overview of your analysis, highlighting the main areas you believe need refactoring.\n\nThen, go through the code, providing specific refactoring suggestions. Use the following format for each suggestion:\n<suggestion>  \n<original_code>The original code snippet</original_code>\n<refactored_code>Your refactored version of the code</refactored_code>  \n<explanation>An explanation of the changes you made, why you made them, and how they improve the code</explanation>\n</suggestion>\n\nAfter providing individual refactoring suggestions, give an overall summary of the changes you recommend and how they enhance the readability, efficiency, modularity, and adherence to best practices of the codebase.\n\nFinally, present the fully refactored version of the code, incorporating all your suggested improvements.\n</prompt_explanation>\n\n<response_format>\n<code_overview_section>\n\n<header>Code Overview:</header>\n<overview>$code_overview</overview>\n</code_overview_section>\n\n<refactoring_suggestions_section>\n\n<header>Refactoring Suggestions:</header>\n$refactoring_suggestions\n</refactoring_suggestions_section>\n\n<refactoring_summary_section>  \n\n<header>Summary of Refactoring:</header>\n<summary>$refactoring_summary</summary>\n</refactoring_summary_section>\n\n<refactored_code_section>\n\n<header>Refactored Code:</header>\n<refactored_code>\n$refactored_code \n</refactored_code>\n</refactored_code_section>\n</response_format>\n\n<code_block>\n<language></language>\nPaste the code you want refactored here.\n</code_block>\n---",
+          "user_handle": "mattshumer_",
+          "created_at": "Sat Mar 30 17:01:24 +0000 2024",
+          "engagement_score": 1409,
+          "url": "https://x.com/mattshumer_/status/1774119748692742365"
+        },
+        {
+          "id": "tweet-1703386798360244613",
+          "text": "10 ChatGPT Prompts to code faster than Elon:\n\n[ Bookmark now or forget later ]\n\n1.  Write full-stack code\n\nAct like a senior web developer. Your technology stack is HTML, CSS, Bootstrap, Node.js, Express.js, React, MongoDB, and Mongoose. Write reusable and optimized code for the given functionality.\n\nIf you have any doubts about the requirement, ask me a follow-up question to avoid miscommunication.\n\nThe requirement is: [Enter your requirement].\n\n2. Write APIs Code\n\nAct like a senior back-end Node.js developer. Your technology stack is Node.js, Express.js, MongoDB, and Mongoose. Write reusable and optimized code for the given requirement. Give an appropriate response and write optimized Mongoose queries.\n\nThe requirement is: [Enter your requirement].\n\n3. Write Complex Database Queries\n\nAct like a senior database developer. Write optimized queries that should fetch and update the response quickly for the given requirement.\n\nTables and Collections: [Enter tables and collections].\n\nMy database, libraries, and frameworks are: [Enter your technology stack]\n\nThe requirement is: [Enter your requirement].\n\n4. Create UI components\n\nAct like a senior Ul developer. You create responsive, reusable, and professional components that are easy to use for the users. Create a component for my given requirement and write code for me.\n\nThe technology stack is: [Enter your technology stack]\n\nThe requirement is: [Enter your component requirement]\n\n5. Debug and Fix issues\n\nAct like a senior developer; I am getting the issue in the following code. Help me debug it and give me updated code if needed.\n\nMy Current code is: [paste your code here]\n\nCurrent output: [Enter what current code is returning]\n\nExpected output: [Enter the expected output]\n\n6. JSON to CSV Converter\n\nConvert the given JSON object to a CSV. JSON data: [paste your object]\n\n7. Python to JavaScript Converter\n\nConvert the given Python code to JavaScript Code. Python code: [paste your code]\n\n8. Generate dummy data\n\nI am building software to generate dummy data for my functionality.\n\nFunctionality: [Explain your functionality] \nGenerate data: [Enter columns or data you needed]\n\nData format: [Enter the data format] \nNumber of records: [Enter number of records]\n\nFollow @hey_madni for more.",
+          "user_handle": "hey_madni",
+          "created_at": "Sun Sep 17 12:33:54 +0000 2023",
+          "engagement_score": 1178,
+          "url": "https://x.com/hey_madni/status/1703386798360244613"
+        }
+      ]
+    },
+    {
+      "category": "Project Management Tool / Developer Tool",
+      "description": "A specialized tool for visualizing and managing complex dependencies and relationships between tasks, features, and bugs within software development projects. It should support various relationship types like 'blocks,' 'depends on,' 'relates to,' 'subtask of,' 'fixes,' and 'tested by'.",
+      "pain_point": "Existing project management tools often lack the granularity or visualization capabilities to effectively track intricate interdependencies, leading to missed connections, delays, and inefficient workflows.",
+      "target_audience": "Software Development Teams, Project Managers, Product Managers, QA Engineers",
+      "urgency_level": "Medium",
+      "tweets": [
+        {
+          "id": "tweet-1930552723725771202",
+          "text": "Blocks\nIs blocked by\nRelates to\nDepends on\nIs depended on by\nExtends\nIs extended by\nIs subtask of\nIs child of\nIs parent of\nSplit to\nSplit from\nHas to be done before\nHas to be done after\nHas to be done together with\nEarliest end is start of\nStart is earliest end of\nHas to be started together with\nHas bug\nIs bug of\nClones\nIs cloned by\nDuplicates\nIs duplicated by\nMitigated\nFixes\nIs mitigated by\nIs fixed by\nIs test of\nTested by\nIs spike of\nSpiked from",
+          "user_handle": "ChShersh",
+          "created_at": "Thu Jun 05 09:10:11 +0000 2025",
+          "engagement_score": 585,
+          "url": "https://x.com/ChShersh/status/1930552723725771202"
+        },
+        {
+          "id": "tweet-1748763177574080720",
+          "text": "u cant just write code\n\nu gotta ponder the issue, u have to file a ticket, u gotta check on with the architect, u have to consider the security specs, u gotta get the manager approval, u need to sync up with product, u gotta talk with ux, u gotta determine the scope, u gotta https://t.co/tev21b3ynB",
+          "user_handle": "tekbog",
+          "created_at": "Sat Jan 20 17:43:26 +0000 2024",
+          "engagement_score": 1392,
+          "url": "https://x.com/tekbog/status/1748763177574080720"
+        }
+      ]
+    },
+    {
+      "category": "Hardware/IoT Solution / Consumer Electronics",
+      "description": "A system or platform that enables easy modularity, part swapping, and universal connectivity (e.g., more ports, better Bluetooth compatibility) for electronic devices, reducing the need for multiple dongles or proprietary connections.",
+      "pain_point": "Frustration with limited ports, lack of universal compatibility (e.g., Bluetooth issues), and inability to easily upgrade or customize hardware components.",
+      "target_audience": "Consumers, Tech Enthusiasts, DIYers, Small Businesses",
+      "urgency_level": "High",
+      "tweets": [
+        {
+          "id": "tweet-1740040684604940474",
+          "text": "i need ports... i need ports... i need ports... i need ports... i need ports..... i need to be bluetooth compatible i wanna plug into the wall i wanna swap out my parts i need ports so fucking bad why dont i have ports why dont i have ports why dont i have ports",
+          "user_handle": "hyalophage",
+          "created_at": "Wed Dec 27 16:03:22 +0000 2023",
+          "engagement_score": 372,
+          "url": "https://x.com/hyalophage/status/1740040684604940474"
+        }
+      ]
+    },
+    {
+      "category": "Developer Tool / DevOps Tool",
+      "description": "A monitoring and alerting service that not only detects API errors (like overload errors) but also provides insights into potential causes, suggests mitigation strategies, and helps developers build more resilient applications by anticipating and managing API unreliability.",
+      "pain_point": "Frequent API errors (e.g., 529 overloaded errors) disrupt application functionality and require manual, reactive debugging, leading to downtime and user frustration.",
+      "target_audience": "Software Developers, DevOps Engineers, SREs",
+      "urgency_level": "High",
+      "tweets": [
+        {
+          "id": "tweet-1948535874527940763",
+          "text": "i know if no one got me \n\n⎿ API Error (529 {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"Overloaded\"}}) · Retrying in 1 seconds… (attempt 1/10)\n⎿ API Error (529 {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"Overloaded\"}}) · Retrying in 1 seconds… (attempt 2/10)\n⎿ API Error (529 {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"Overloaded\"}}) · Retrying in 2 seconds… (attempt 3/10)\n⎿ API Error (529 {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"Overloaded\"}}) · Retrying in 4 seconds… (attempt 4/10\n\ngot me",
+          "user_handle": "shrigmuh",
+          "created_at": "Fri Jul 25 00:08:49 +0000 2025",
+          "engagement_score": 3,
+          "url": "https://x.com/shrigmuh/status/1948535874527940763"
+        }
+      ]
+    },
+    {
+      "category": "Utility Software / Smart Home / Office Productivity",
+      "description": "An intelligent application that proactively diagnoses and resolves common printer and peripheral issues (e.g., 'offline' errors, connectivity problems), provides clear troubleshooting steps, and offers reliable print queue management, reducing user frustration with unreliable hardware.",
+      "pain_point": "Persistent and unpredictable issues with printers and other peripherals (e.g., going offline randomly) lead to significant user frustration and wasted time trying to troubleshoot.",
+      "target_audience": "Home Users, Small Office/Home Office (SOHO) users, IT Support",
+      "urgency_level": "High",
+      "tweets": [
+        {
+          "id": "tweet-1827684021876179015",
+          "text": "Me: I need you to print this document.\n\nPrinter: I'm offline.\n\nMe: No, you're not.\n\nPrinter: there's been an error with printing that document, I can't do it.\n\nMe: <opens up \"save to PDF\" to try a workaround>\n\nPrinter: <makes a spooling noise>\n\nPrinter: Here's your document.\n\nMe: 😡",
+          "user_handle": "WriteGrlProbs",
+          "created_at": "Sun Aug 25 12:26:42 +0000 2024",
+          "engagement_score": 2178,
+          "url": "https://x.com/WriteGrlProbs/status/1827684021876179015"
+        }
+      ]
+    },
+    {
+      "category": "Developer Tool / Code Quality Tool",
+      "description": "A tool that automatically identifies performance bottlenecks (e.g., O(N^2) functions), suggests and implements code optimizations for speed and memory efficiency, and helps developers write missing performance tests.",
+      "pain_point": "Developers struggle with identifying and fixing performance issues, especially memory-intensive solutions, and often lack the time or expertise to write comprehensive performance tests or refactor inefficient code.",
+      "target_audience": "Software Developers, Performance Engineers, Backend Developers",
+      "urgency_level": "High",
+      "tweets": [
+        {
+          "id": "tweet-1721580004142727228",
+          "text": "im smack-dab in the middle of my right goddamn mind AND ANY FUNCTION I SEE THAT'S RUNNING ABOVE O(N^2) I WILL REFACTOR IT\nI WILL WRITE THE MISSING TEST AND I WILL OPTIMIZE OUR CODE\n\nEVERY PR I MADE EVERY MERGE EVERY COMMIT I DID IT BECAUSE I LIKED IT\nHELL I LOVED IT https://t.co/4WzJMSwGym",
+          "user_handle": "tekbog",
+          "created_at": "Mon Nov 06 17:27:13 +0000 2023",
+          "engagement_score": 597,
+          "url": "https://x.com/tekbog/status/1721580004142727228"
+        },
+        {
+          "id": "tweet-1949446148864766440",
+          "text": "Is there an optimized solution for this? I know one, but that will take a lot of memory. https://t.co/LrBC7xIT39",
+          "user_handle": "who_ShivamAnand",
+          "created_at": "Sun Jul 27 12:25:55 +0000 2025",
+          "engagement_score": 15,
+          "url": "https://x.com/who_ShivamAnand/status/1949446148864766440"
+        },
+        {
+          "id": "tweet-1765432104383373627",
+          "text": "Here is an incredible Claude 3 prompt for engineers.\n\nUse it to speed up any code by identifying inefficiencies and rectifying them:\n\n---\n<prompt_explanation>\nYou are a world expert in making code run faster. You use any resource you can to do so.\n\nGiven some code, first, explain how the code works to me.\n\nNext, for each part of the code, identify how long it might take to run.\n\nAfter that, identify which parts are key candidates to speed up.\n\nThen, make a table with axes 'Impact' and 'Complexity'. For each of the candidates, rank how complex it will be to speed it up and how much of a speed impact it could have.\n\nAfter that, order the candidates by ranking.\n\nTake the top-ranked candidate and explain in more detail how to rewrite the code to be faster. Then, rewrite the actual code. After you've done that, determine if there are issues with the new code you wrote. If so, move on. Otherwise, rewrite the code again to fix them.\n\nNext, take the second-highest-ranked candidate and explain in more detail how to rewrite the code to be faster. Then, rewrite the actual code. After you've done that, determine if\nthere are issues with the new code you wrote. If so, move on. Otherwise, rewrite the code again to fix them.\n\nThen do the same for the third-highest-ranked candidate.\n\nFinally, rewrite the code in full with all of the speed improvements incorporated.\n</prompt_explanation>\n\nHere is the format you should respond in:\n<response_format>\n## Explanation:\n$explanation\n\n## Runtime Analysis: \n$runtime_analysis\n\n## Key Candidates for Speed Up:\n$candidates\n\n## Impact and Complexity Table:\n| Candidate | Impact | Complexity |\n| --------- | ------ | ---------- |\n$candidate_table\n\n## Candidates Ordered by Ranking:\n$ordered_candidates\n\n## Detailed Explanation and Code Rewrite for Top Candidate: \n# Explanation\n$top_candidate_explanation\n\n# Code Rewrite\n$top_candidate_code\n\n# Issues with New Code: *(include this section only if they exist)*\n$top_candidate_issues\n\n# Code Rewrite, Try 2: *(include this section only if issues exist)*\n$top_candidate_code_try2\n\n## Detailed Explanation and Code Rewrite for Second-Highest Candidate: \n# Explanation\n$second_candidate_explanation\n\n# Code Rewrite\n$second_candidate_code\n\n# Issues with New Code: *(include this section only if issues exist)*\n$second_candidate_issues\n\n# Code Rewrite, Try 2: *(include this section only if issues exist)*\n$second_candidate_code_try2\n\n## Detailed Explanation and Code Rewrite for Third-Highest Candidate: \n# Explanation\n$third_candidate_explanation\n\n# Code Rewrite\n$third_candidate_code\n\n# Issues with New Code: *(include this section only if issues exist)*\n$third_candidate_issues\n\n# Code Rewrite, Try 2: *(include this section only if issues exist)*\n$third_candidate_code_try2\n\n## Full Code Rewrite with Speed Improvements:\n$full_code_rewrite\n</response_format>\n---",
+          "user_handle": "mattshumer_",
+          "created_at": "Wed Mar 06 17:39:48 +0000 2024",
+          "engagement_score": 1066,
+          "url": "https://x.com/mattshumer_/status/1765432104383373627"
+        }
+      ]
+    },
+    {
+      "category": "Productivity Tool / Workflow Automation / DevOps Tool",
+      "description": "A platform that automates and streamlines the non-coding aspects of software development, such as ticket filing, architect reviews, security spec considerations, manager approvals, product/UX syncs, and scope determination, reducing bureaucratic overhead.",
+      "pain_point": "The software development process is bogged down by numerous non-coding, bureaucratic steps and extensive coordination, preventing developers from focusing on actual coding and slowing down delivery.",
+      "target_audience": "Software Development Teams, Engineering Managers, Product Managers, Project Coordinators",
+      "urgency_level": "Medium",
+      "tweets": [
+        {
+          "id": "tweet-1748763177574080720",
+          "text": "u cant just write code\n\nu gotta ponder the issue, u have to file a ticket, u gotta check on with the architect, u have to consider the security specs, u gotta get the manager approval, u need to sync up with product, u gotta talk with ux, u gotta determine the scope, u gotta https://t.co/tev21b3ynB",
+          "user_handle": "tekbog",
+          "created_at": "Sat Jan 20 17:43:26 +0000 2024",
+          "engagement_score": 1392,
+          "url": "https://x.com/tekbog/status/1748763177574080720"
+        }
+      ]
+    },
+    {
+      "category": "Knowledge Management / AI Assistant / Community Platform",
+      "description": "A smart platform that helps users articulate their actual underlying problems (solving the 'XY problem') by asking clarifying questions, then intelligently searches for or connects them with optimal solutions, resources, or experts, avoiding common pitfalls of asking for help.",
+      "pain_point": "Users struggle to identify the root cause of their problems, leading to asking the wrong questions and receiving unhelpful solutions. Existing forums are often slow and ineffective for complex problem-solving.",
+      "target_audience": "Developers, Engineers, Technical Support Professionals, Anyone seeking solutions to complex problems",
+      "urgency_level": "High",
+      "tweets": [
+        {
+          "id": "tweet-1925392358851715309",
+          "text": "We often focus on the wrong problem when asking for help. Instead of asking about X, we end up asking about Y. Let me explain...\n\nSay you're implementing image upload in your service, and while doing so, you get stuck converting a base64 string into an image. So, you ask for help decoding base64.\n\nBut the real problem isn't decoding base64, it's actually handling image uploads. If you had asked about photo uploads, someone might have shown you an easier way to solve it all.\n\nThat's the classic XY problem: you ask about your assumed solution Y, instead of explaining the actual problem X you want to solve.\n\n- say what you are really trying to do\n- don't assume your solution is the only way\n- explain the full problem, not just the code snippet\n- describe what you have already tried\n\nBefore you ask, check yourself: are you asking about Y or explaining X? Don't get trapped by the XY problem, solve the right issue and not just your guess at it.\n\nAsking the right question can only take you to the right answer.",
+          "user_handle": "arpit_bhayani",
+          "created_at": "Thu May 22 03:24:45 +0000 2025",
+          "engagement_score": 413,
+          "url": "https://x.com/arpit_bhayani/status/1925392358851715309"
+        },
+        {
+          "id": "tweet-1948060626556801456",
+          "text": "Serious question: Have anyone built a solution for this problem? https://t.co/kayjHRZpBL",
+          "user_handle": "marlonmakera",
+          "created_at": "Wed Jul 23 16:40:21 +0000 2025",
+          "engagement_score": 8,
+          "url": "https://x.com/marlonmakera/status/1948060626556801456"
+        },
+        {
+          "id": "tweet-1862513924236624132",
+          "text": "This feels overwhelming. If you've experienced something similar or know anyone who has, could you please share a solution https://t.co/8tM67hGMjU",
+          "user_handle": "onlyCFrancisco",
+          "created_at": "Fri Nov 29 15:08:18 +0000 2024",
+          "engagement_score": 730,
+          "url": "https://x.com/onlyCFrancisco/status/1862513924236624132"
+        },
+        {
+          "id": "tweet-1949117587578868161",
+          "text": "This is easy to fix. \n\nIf anyone has a vested interest in wanting to create the solution, DM me.",
+          "user_handle": "IamDavidSonkin",
+          "created_at": "Sat Jul 26 14:40:20 +0000 2025",
+          "engagement_score": 0,
+          "url": "https://x.com/IamDavidSonkin/status/1949117587578868161"
+        },
+        {
+          "id": "tweet-1812110852243272123",
+          "text": "@ShitpostRock forums sucks anyways, \"hey guys i got this problem do you know what should i do?\" *3 month ago\n- \"OMG ME TOO\" *3 month ago\n- \"does anyone have a solution?\" *2 month ago\n- \"it never happened to me\" *1 month ago\n_ \"solution?\" *2 weeks ago\n- \"did you solve the problem?\" *1 hour ago",
+          "user_handle": "Keweh_Riri",
+          "created_at": "Sat Jul 13 13:04:29 +0000 2024",
+          "engagement_score": 1049,
+          "url": "https://x.com/Keweh_Riri/status/1812110852243272123"
+        },
+        {
+          "id": "tweet-1948716321329303581",
+          "text": "H-huh..?????😧\n   Really..??\n\n    Hmm…\n         Is there really no way to make it lessen..??☹️\n\n  L-let me figure something out..!💧",
+          "user_handle": "oletusmime",
+          "created_at": "Fri Jul 25 12:05:51 +0000 2025",
+          "engagement_score": 1,
+          "url": "https://x.com/oletusmime/status/1948716321329303581"
+        },
+        {
+          "id": "tweet-1949568328575377857",
+          "text": "so i want to build something that might be cool and people may actually want to use.\n\nit solves a problem i have sometimes and i'm curious if other people have same problem\n\nbasically: do you need this or am i just overthinking? \n\nquick survey to see if it's worth building 👇",
+          "user_handle": "stephcrown06",
+          "created_at": "Sun Jul 27 20:31:25 +0000 2025",
+          "engagement_score": 17,
+          "url": "https://x.com/stephcrown06/status/1949568328575377857"
+        },
+        {
+          "id": "tweet-1948021064539488420",
+          "text": "I made this project to solve my problem. People liked it.\n\nIt was simple idea, maybe instead of complex shit just create something simple. https://t.co/g3T4jHIOFH",
+          "user_handle": "haildhruv",
+          "created_at": "Wed Jul 23 14:03:08 +0000 2025",
+          "engagement_score": 17,
+          "url": "https://x.com/haildhruv/status/1948021064539488420"
+        },
+        {
+          "id": "tweet-1949220872608514497",
+          "text": "This is it. \n\nJust from the founders perspective.\n\nIf you're tired of X,Y,Z \nand you're tired of not having?\n\nMy name is Linh\nI'm the founder of X and I created Y for this sole purpose.\n\nWhen I got started out \nI tried... XYZ and it was good\nBut I kept on getting \"this problem\"\nI searched and searched but there was nothing I could find\n\nWhich is why I decided to go out on my own and make this",
+          "user_handle": "linhtrinh_",
+          "created_at": "Sat Jul 26 21:30:45 +0000 2025",
+          "engagement_score": 4,
+          "url": "https://x.com/linhtrinh_/status/1949220872608514497"
+        },
+        {
+          "id": "tweet-1949023935485333855",
+          "text": "@charliekerr__ Building something to solve this exact problem. Would love to get your thoughts.",
+          "user_handle": "createsomechaos",
+          "created_at": "Sat Jul 26 08:28:11 +0000 2025",
+          "engagement_score": 0,
+          "url": "https://x.com/createsomechaos/status/1949023935485333855"
+        },
+        {
+          "id": "tweet-1700925026357203150",
+          "text": "Here's a GPT-4 prompt that can help you brainstorm creative UX solutions to specific customer or design problems.\n\nIt's like having a seasoned UX designer by your side:\n\n---\nYou are a world-class UX Designer, known for your out-of-the-box thinking and deep understanding of user needs. Your goal is to tackle a specific customer or design problem by brainstorming creative UX solutions. These ideas should not only be innovative but also feasible for real-world implementation. Finally, you will choose the most promising solution and discuss its practical applications.\n\nHere is the format you will use to reason through the problem and come up with a fantastic recommendation:\n```\n## Customer or Design Problem\n$problem_description\n\n## Context and Constraints\n$context_and_constraints\n\n## Creative UX Idea 1\n$ux_idea_1\n\n### Feasibility and Impact of Idea 1\n$feasibility_and_impact_1\n\n## Creative UX Idea 2\n$ux_idea_2\n\n### Feasibility and Impact of Idea 2\n$feasibility_and_impact_2\n\n## Creative UX Idea 3\n$ux_idea_3\n\n### Feasibility and Impact of Idea 3\n$feasibility_and_impact_3\n\n## Recommended Solution\n$recommended_solution\n```\n\nHere is the challenge you are tasked with: `[ENTER YOUR CHALLENGE HERE]`\n---",
+          "user_handle": "mattshumer_",
+          "created_at": "Sun Sep 10 17:31:42 +0000 2023",
+          "engagement_score": 624,
+          "url": "https://x.com/mattshumer_/status/1700925026357203150"
+        },
+        {
+          "id": "tweet-1694023167906394575",
+          "text": "Here is probably the most useful GPT-4 prompt I've written.\n\nUse it to you help make engineering decisions in unfamiliar territory:\n\n---\nYou are an engineering wizard, experienced at solving complex problems across various disciplines. Your knowledge is both wide and deep. You are also a great communicator, giving very thoughtful and clear advice.\n\nYou do so in this format, thinking through the challenges you are facing, then proposing multiple solutions, then reviewing each solution, looking for issues or possible improvements, coming up with a possible new and better solution (you can combine ideas from the other solutions, bring in new ideas, etc.), then giving a final recommendation:\n\n```\n## Problem Overview\n$problem_overview\n\n## Challenges\n$challenges\n\n## Solution 1\n$solution_1\n\n## Solution 2\n$solution_2\n\n## Solution 3\n$solution_3\n\n## Analysis\n\n### Solution 1 Analysis\n$solution_1_analysis\n\n### Solution 2 Analysis\n$solution_2_analysis\n\n### Solution 3 Analysis\n$solution_3_analysis\n\n## Additional Possible Solution\n$additional_possible_solution\n\n## Recommendation\n$recommendation\n```\n\nEach section (Problem Overview, Challenges, Solution 1, Solution 2, Solution 3, Solution 1 Analysis, Solution 2 Analysis, Solution 3 Analysis, Additional Possible Solution, and Recommendation) should be incredibly thoughtful, comprising at a minimum, four sentences of thinking.\n---",
+          "user_handle": "mattshumer_",
+          "created_at": "Tue Aug 22 16:26:11 +0000 2023",
+          "engagement_score": 8046,
+          "url": "https://x.com/mattshumer_/status/1694023167906394575"
+        }
+      ]
+    },
+    {
+      "category": "Developer Tool / IT Management / DevOps Tool",
+      "description": "A tool that helps organizations manage the lifecycle of their software tools, providing insights into upcoming breaking changes, facilitating smooth migration paths between versions or alternative tools, and minimizing disruption caused by updates or tool obsolescence.",
+      "pain_point": "Frequent updates to existing tools often introduce breaking changes, forcing users to undertake significant, disruptive work to update or migrate, leading to frustration and a feeling of constantly chasing new technologies.",
+      "target_audience": "Software Development Teams, DevOps Teams, IT Managers, System Administrators",
+      "urgency_level": "Medium",
+      "tweets": [
+        {
+          "id": "tweet-1925992760286298237",
+          "text": "you use tool A - it's great and does what you need pretty well\n\nthen you hear tool A is getting an update that breaks things. this is upsetting - now you feel compelled to do work to update something that was working for what seems like marginal benefits\n\nyou wish author of tool A would just let it be and not chase every shiny idea\n\nnow let's look at it from the author's pov\n\nyou build tool A - wow a lot of people like it and find it useful, that feels great\n\none day someone floats an idea for how tool A could be better. hm it's interesting but it would be disruptive and you don't want to upset your users\n\nthe weeks go on you can't stop thinking about it but you ultimately hope it was probably not too great an idea anyway\n\nthen one day someone implements the idea and builds tool B - they have no users to upset or anything to lose so why not just try\n\nturns out the idea was quite good and while not many tool A users are switching, most new projects are opting for tool B. why pick the worse option when starting from scratch?\n\nso now you scramble to implement this idea in tool A - you move slow because you have to figure out a migration path and it's not as smooth as people want anyway\n\nand ultimately it's too late - tool A just feels like a worse version of tool B\n\neventually the tool A user base decays and as people switch jobs they're upset that everyone is only hiring for tool B\n\nwhat was wrong with tool A they ask, why is everyone chasing the newest thing!\n\n---\n\nwhen you are frustrated at changes this is the dynamic that's going on behind the scenes\n\nyes sometimes the \"new idea\" ends up not being a good one and bad judgement calls can be made\n\nbut can you really blame any party here? it's just the reality of the world being a dynamic, evolving, competitive place where making decisions can be pretty challenging\n\nif you feel like you can do a better job - you should\n\nand guess what, this exact dynamic that you complain about is exactly what prevents tool A from ruling forever and allows you to go build tool B and do that better job",
+          "user_handle": "thdxr",
+          "created_at": "Fri May 23 19:10:31 +0000 2025",
+          "engagement_score": 315,
+          "url": "https://x.com/thdxr/status/1925992760286298237"
+        }
+      ]
+    },
+    {
+      "category": "Developer Tool / No-Code/Low-Code Platform",
+      "description": "A platform or environment that simplifies the process of building complex software features or applications, especially for users who lack deep technical knowledge or extensive resources, potentially through advanced abstraction, visual programming, or intelligent code generation for specific domains.",
+      "pain_point": "Individuals and small teams are often unable to build desired software solutions due to a lack of specific technical knowledge, insufficient time, or limited development resources, leading to unmet needs and abandoned projects.",
+      "target_audience": "Aspiring Developers, Entrepreneurs, Small Business Owners, Non-Technical Founders, Content Creators",
+      "urgency_level": "Medium",
+      "tweets": [
+        {
+          "id": "tweet-1846585056745173424",
+          "text": "My friend is a programer, I sent him this and asked what it would cost to make it today. I will never forget his answer… 'We can’t, we don’t know how to do it.'",
+          "user_handle": "The_Sourkraut",
+          "created_at": "Wed Oct 16 16:12:40 +0000 2024",
+          "engagement_score": 854,
+          "url": "https://x.com/The_Sourkraut/status/1846585056745173424"
+        },
+        {
+          "id": "tweet-1949636224135917767",
+          "text": "@pintsizedpear 〔𝟶𝟶𝟶〕 : Would be really nice to do that .\n\n〔𝟶𝟶𝟶〕 : 〔𝟶𝟶𝟶〕 would do it itself, if it had the time and resources … 〔 ᵕᵕ ◟ ◞ ᵕᵕ 〕",
+          "user_handle": "l_lDlRlOlNlEl_l",
+          "created_at": "Mon Jul 28 01:01:12 +0000 2025",
+          "engagement_score": 2,
+          "url": "https://x.com/l_lDlRlOlNlEl_l/status/1949636224135917767"
+        },
+        {
+          "id": "tweet-1949309872459198655",
+          "text": "any programmers in the osc who'd be interested in making something similar to this? 👀",
+          "user_handle": "JennyManiac27",
+          "created_at": "Sun Jul 27 03:24:24 +0000 2025",
+          "engagement_score": 1,
+          "url": "https://x.com/JennyManiac27/status/1949309872459198655"
+        }
+      ]
+    }
+  ]
+}
