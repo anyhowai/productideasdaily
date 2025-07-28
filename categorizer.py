@@ -9,7 +9,7 @@ import json
 import logging
 import os
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -142,6 +142,45 @@ class TweetCategorizer:
         logger.info(f"Processed {len(tweets)} structured tweets")
         return tweets
 
+    def _get_previous_day_analysis(self) -> Optional[str]:
+        """Get the previous day's analysis to avoid generating duplicate ideas."""
+
+        # Calculate previous day's date
+        today = datetime.now(timezone.utc)
+        yesterday = today - timedelta(days=1)
+        yesterday_date = yesterday.strftime("%d%m%y")
+
+        previous_analysis_file = f"data/analysis/{yesterday_date}_analysis.json"
+
+        try:
+            if Path(previous_analysis_file).exists():
+                logger.info(
+                    f"Loading previous day's analysis from: {previous_analysis_file}"
+                )
+                with open(previous_analysis_file, "r", encoding="utf-8") as f:
+                    previous_data = json.load(f)
+
+                # Extract product requests from previous analysis
+                previous_requests = previous_data.get("product_requests", [])
+                if previous_requests:
+                    previous_ideas = []
+                    for req in previous_requests:
+                        idea_summary = f"- {req.get('category', 'Unknown')}: {req.get('description', '')}"
+                        previous_ideas.append(idea_summary)
+
+                    return "\n".join(previous_ideas)
+                else:
+                    logger.info("No product requests found in previous day's analysis")
+                    return None
+            else:
+                logger.info(
+                    f"Previous day's analysis file not found: {previous_analysis_file}"
+                )
+                return None
+        except Exception as e:
+            logger.warning(f"Error loading previous day's analysis: {e}")
+            return None
+
     def create_analysis_prompt(self, tweets: List[TweetData]) -> str:
         """Create a comprehensive prompt for Gemini to analyze tweets."""
         logger.info(f"Creating analysis prompt for {len(tweets)} tweets")
@@ -153,11 +192,26 @@ class TweetCategorizer:
         tweets_text = "\n".join(tweet_texts)
         logger.debug(f"Prepared {len(tweet_texts)} tweet texts for analysis")
 
+        # Get previous day's ideas to avoid duplicates
+        previous_ideas = self._get_previous_day_analysis()
+        previous_ideas_section = ""
+        if previous_ideas:
+            previous_ideas_section = f"""
+## PREVIOUS DAY'S IDEAS (AVOID DUPLICATES)
+The following product ideas were identified in the previous day's analysis. DO NOT generate similar or duplicate ideas:
+
+{previous_ideas}
+
+IMPORTANT: Focus on NEW and DIFFERENT product opportunities that were not identified yesterday. Avoid generating ideas that are similar to the ones listed above.
+"""
+
         prompt = f"""
 You are an expert startup analyst and market researcher specializing in identifying unmet market needs from social media data. Your task is to analyze tweets and extract actionable product opportunities for entrepreneurs and product managers.
 
 ## TASK
 Analyze the provided tweets to identify genuine product requests and market opportunities. Extract exactly 10 product requests that represent the most promising business opportunities.
+
+{previous_ideas_section}
 
 ## ANALYSIS CRITERIA
 For each product request, identify:
@@ -194,6 +248,7 @@ For each product request, identify:
 - Look for patterns and recurring themes across multiple tweets
 - Exclude requests that are too vague or already have existing solutions
 - Ensure each request represents a distinct product opportunity
+- Avoid generating ideas similar to those from the previous day's analysis
 
 ## OUTPUT FORMAT
 Return your analysis as a JSON object with exactly this structure:
@@ -218,6 +273,7 @@ Return your analysis as a JSON object with exactly this structure:
 - Include exactly 10 product requests, no more, no less
 - Each product request should be distinct and represent a different opportunity
 - Use tweet IDs exactly as they appear in the list below (numeric format only)
+- Focus on NEW ideas that differ from the previous day's analysis
 
 ## TWEETS TO ANALYZE
 {tweets_text}
