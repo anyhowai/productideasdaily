@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "total_tweets_analyzed": 0,
+    "product_requests_found": 0,
+    "token_usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "product_requests": []
+}
