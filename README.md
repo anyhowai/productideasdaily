@@ -1,4 +1,4 @@
-# Gummy-X: Startup Idea Discovery Platform
+# Product Ideas Daily: Startup Idea Discovery Platform
 
 A comprehensive platform that scrapes targeted tweets from X (Twitter), categorizes them using AI to identify pain points and product requests, and presents insights through an interactive dashboard for startup ideation.
 
